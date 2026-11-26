@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#34266f"><title>English Wonderland</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="auth-screen" class="auth-screen">
+  <div class="auth-card">
+    <div class="brand-mark">🦄</div><div class="brand">English Wonderland</div>
+    <p class="muted">Your magical world of English learning</p>
+    <div class="auth-tabs"><button class="tab active" data-auth="login">Sign in</button><button class="tab" data-auth="register">Create account</button></div>
+    <form id="auth-form"><label id="name-wrap" class="hidden">Display name<input id="display-name" placeholder="Your name"></label><label>Email<input id="email" type="email" required placeholder="you@example.com"></label><label>Password<input id="password" type="password" minlength="8" required placeholder="At least 8 characters"></label><button class="primary full" id="auth-submit">Enter Wonderland ✨</button></form>
+    <p id="auth-message" class="message"></p><small class="muted">Your learning data is saved to your account on this server.</small>
+  </div>
+</div>
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand-side"><span>🦄</span><div><b>English<br>Wonderland</b><small>Learn · Practice · Grow</small></div></div>
+    <div class="mascot">🐻‍❄️<small>Hi, learner!<br>Let's shine today.</small></div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="home">🏡 <span>Home</span></button>
+      <button class="nav-item" data-page="vocabulary">🌱 <span>Vocabulary Garden</span></button>
+      <button class="nav-item" data-page="grammar">🪐 <span>Grammar Galaxy</span></button>
+      <button class="nav-item" data-page="writing">✍️ <span>Writing Workshop</span></button>
+      <button class="nav-item" data-page="reading">📚 <span>Reading Universe</span></button>
+      <button class="nav-item" data-page="practice">🎮 <span>Practice Zone</span></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="streak">🔥 Your learning journey starts here!</div><button id="logout" class="nav-item">⚙️ <span>Sign out</span></button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><span class="eyebrow">YOUR PERSONAL ENGLISH LEARNING HUB</span><h1 id="page-title">Welcome to Wonderland!</h1></div><div class="top-actions"><span id="user-label" class="user-pill">Learner</span><button id="theme-toggle" class="icon-btn" title="Toggle theme">🌙</button></div></header>
+    <section id="page-content" aria-live="polite"></section>
+    <footer>Made for curious minds ✨ <span>English Wonderland · A1–C2</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body></html>
